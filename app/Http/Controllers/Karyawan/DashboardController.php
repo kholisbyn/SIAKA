@@ -61,7 +61,7 @@ class DashboardController extends Controller
         |--------------------------------------------------------------------------
         */
 
-        $jumlahNotifikasi = Notifikasi::where(
+        $notifikasiBelumDibaca = Notifikasi::where(
             'user_id',
             Auth::id()
         )
@@ -84,7 +84,7 @@ class DashboardController extends Controller
                 'karyawan',
                 'absensi',
                 'notifikasis',
-                'jumlahNotifikasi'
+                'notifikasiBelumDibaca'
             )
         );
     }
